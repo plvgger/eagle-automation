@@ -77,6 +77,28 @@ export function Hero() {
                 </motion.div>
               </div>
             </FadeIn>
+
+            <FadeIn delay={0.4}>
+              <div className="mt-8 flex items-center gap-6">
+                <Image
+                  src="/logos/fanuc-asi-badge.png"
+                  alt="FANUC Authorized System Integrator"
+                  width={48}
+                  height={48}
+                  className="opacity-80 hover:opacity-100 transition-opacity"
+                />
+                <Image
+                  src="/logos/eagle-machine-25yr-badge.png"
+                  alt="Eagle Machine — 25 Years"
+                  width={52}
+                  height={52}
+                  className="opacity-80 hover:opacity-100 transition-opacity"
+                />
+                <span className="text-xs text-dark-500 leading-tight max-w-[180px]">
+                  FANUC Authorized Integrator &middot; 25&nbsp;Years in Manufacturing
+                </span>
+              </div>
+            </FadeIn>
           </div>
 
           {/* Right: Hero image */}

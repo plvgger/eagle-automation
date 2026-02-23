@@ -114,8 +114,26 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Trust badges */}
+        <div className="mt-12 pt-8 border-t border-dark-800 flex flex-wrap items-center justify-center gap-8">
+          <Image
+            src="/logos/fanuc-asi-badge.png"
+            alt="FANUC Authorized System Integrator"
+            width={56}
+            height={56}
+            className="opacity-70 hover:opacity-100 transition-opacity"
+          />
+          <Image
+            src="/logos/eagle-machine-25yr-badge.png"
+            alt="Eagle Machine — 25 Years in Manufacturing"
+            width={60}
+            height={60}
+            className="opacity-70 hover:opacity-100 transition-opacity"
+          />
+        </div>
+
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-dark-800">
+        <div className="mt-8 pt-6 border-t border-dark-800">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-xs text-dark-500">
               © 2026 Eagle Automation. All rights
