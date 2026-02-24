@@ -6,6 +6,7 @@ import { ScrollProgress } from "@/components/motion/ScrollProgress";
 import { OrganizationJsonLd } from "@/components/JsonLd";
 import { Analytics } from "@/components/Analytics";
 import { siteConfig } from "@/lib/content";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -81,6 +82,7 @@ export default function RootLayout({
         <Navbar />
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
