@@ -7,6 +7,7 @@ import { OrganizationJsonLd } from "@/components/JsonLd";
 import { Analytics } from "@/components/Analytics";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { siteConfig } from "@/lib/content";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -83,6 +84,7 @@ export default function RootLayout({
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />
         <VercelAnalytics />
+        <SpeedInsights />
       </body>
     </html>
   );
