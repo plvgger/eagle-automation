@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/motion/ScrollProgress";
 import { OrganizationJsonLd } from "@/components/JsonLd";
 import { Analytics } from "@/components/Analytics";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { siteConfig } from "@/lib/content";
 import "./globals.css";
 
@@ -77,6 +78,7 @@ export default function RootLayout({
         </a>
         <OrganizationJsonLd />
         <Analytics />
+        <VercelAnalytics />
         <ScrollProgress />
         <Navbar />
         <main id="main-content" className="flex-1">{children}</main>
