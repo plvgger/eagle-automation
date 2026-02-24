@@ -78,6 +78,7 @@ export default function RootLayout({
         </a>
         <OrganizationJsonLd />
         <Analytics />
+        <VercelAnalytics />
         <ScrollProgress />
         <Navbar />
         <main id="main-content" className="flex-1">{children}</main>
