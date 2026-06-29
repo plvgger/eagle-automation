@@ -9,6 +9,7 @@ import { MotionDiv } from "@/components/motion/MotionDiv";
 import { GridBackground } from "@/components/motion/GridBackground";
 import { platformContent } from "@/lib/content";
 import { RobotGrid } from "@/components/platform/RobotGrid";
+import { RobotLineup } from "@/components/platform/RobotLineup";
 
 export const metadata: Metadata = {
   title: "Platform",
@@ -43,19 +44,7 @@ export default function PlatformPage() {
 
       {/* Family Lineup Banner */}
       <Section dark className="border-t border-dark-800 !py-10">
-        <FadeIn>
-          <div className="relative w-full rounded-xl overflow-hidden border border-dark-700 bg-dark-900">
-            <Image
-              src="/images/robots/crx-family-lineup.png"
-              alt="Full FANUC CRX collaborative robot lineup"
-              width={1200}
-              height={400}
-              className="w-full h-auto"
-              sizes="(max-width: 1200px) 100vw, 1200px"
-              priority
-            />
-          </div>
-        </FadeIn>
+        <RobotLineup robots={platformContent.robots} />
       </Section>
 
       {/* Robot Models — compact grid with detail expand */}
