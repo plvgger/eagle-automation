@@ -46,12 +46,12 @@ function DetailPanel({
       <div className="mt-2 mb-2 rounded-xl border border-dark-700 bg-dark-800/80 backdrop-blur-sm p-5 lg:p-6">
         <div className="grid gap-5 lg:grid-cols-[180px_1fr]">
           {robot.image && (
-            <div className="relative aspect-[3/4] w-full max-w-[180px] mx-auto lg:mx-0 rounded-lg overflow-hidden bg-dark-900/50 border border-dark-700">
+            <div className="relative aspect-square w-full max-w-[180px] mx-auto lg:mx-0 rounded-lg overflow-hidden robot-stage border border-dark-700">
               <Image
                 src={robot.image}
                 alt={`FANUC ${robot.model}`}
                 fill
-                className="object-contain p-2"
+                className="relative z-[1] object-contain p-2"
                 sizes="180px"
               />
             </div>
@@ -175,13 +175,13 @@ export function RobotGrid({ robots }: { robots: Robot[] }) {
                   : "border-dark-700 bg-dark-900/50 hover:border-dark-500 hover:bg-dark-800/60"
               }`}
             >
-              <div className="relative aspect-square bg-dark-800/30 overflow-hidden">
+              <div className="relative aspect-square robot-stage overflow-hidden">
                 {robot.image ? (
                   <Image
                     src={robot.image}
                     alt={`FANUC ${robot.model}`}
                     fill
-                    className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
+                    className="relative z-[1] object-contain p-2 transition-transform duration-300 group-hover:scale-[1.04]"
                     sizes="(max-width: 768px) 45vw, 300px"
                   />
                 ) : (

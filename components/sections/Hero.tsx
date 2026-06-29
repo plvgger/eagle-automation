@@ -5,6 +5,8 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { StatCard } from "@/components/ui/Card";
 import { FadeIn } from "@/components/motion/FadeIn";
+import { BlurText } from "@/components/motion/BlurText";
+import { ShinyText } from "@/components/motion/ShinyText";
 import { GridBackground } from "@/components/motion/GridBackground";
 import { AnimatedOrb } from "@/components/motion/AnimatedOrb";
 import { heroContent } from "@/lib/content";
@@ -32,15 +34,15 @@ export function Hero() {
               </motion.p>
             </FadeIn>
 
-            <FadeIn delay={0.1}>
-              <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[1.08]">
-                <span className="text-white">{heroContent.headline}</span>
-                <br />
-                <span className="text-eagle-orange">
-                  {heroContent.headlineAccent}
-                </span>
-              </h1>
-            </FadeIn>
+            <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[1.08]">
+              <BlurText
+                text={heroContent.headline}
+                className="text-white"
+                delay={0.1}
+              />
+              <br />
+              <ShinyText>{heroContent.headlineAccent}</ShinyText>
+            </h1>
 
             <FadeIn delay={0.2}>
               <p className="mt-6 text-lg lg:text-xl text-dark-400 max-w-2xl leading-relaxed">
